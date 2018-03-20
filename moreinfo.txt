@@ -1,0 +1,2 @@
+https://github.com/crops/poky-container
+docker run --rm -it -v ~/Projects/indoorcomfort/client/project:/workdir crops/poky --workdir=/workdir

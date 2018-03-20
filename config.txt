@@ -1,0 +1,41 @@
+$ git clone -b dora git://git.yoctoproject.org/poky.git
+• $ cd poky
+• $ git clone -b dylan git://git.yoctoproject.org/meta-raspberrypi
+• Initialize environment variables and the build directory, use:
+• $ . oe-init-build-env build script
+• edit conf/local.conf tom match the compilation environment:
+ BB_NUMBER_THREADS = "2"
+ PARALLEL_MAKE = "-j 2"
+ MACHINE ?= "raspberrypi"
+ GPU_MEM = "16"
+• edit poky/build/conf so that the paths match your locale set up
+BBLAYERS ?= " \
+/yocto/poky/meta \
+/yocto/poky/meta-yocto \
+/yocto/poky/meta-yocto-bsp \
+/yocto/poky/meta-raspberrypi \
+• Build the image: bitbake rpi-basic-image
+• Can be copied (dd) to SD as such
+http://www.jumpnowtek.com/rpi/Raspberry-Pi-Systems-with-Yocto.html
+https://raspinterest.wordpress.com/2016/11/30/yocto-project-on-raspberry-pi-3/
+http://www.jumpnowtek.com/yocto/Add-golang-support-to-a-Yocto-build.html
+----------------
+
+Steps:
+1) Add following line to local.conf
+#################################################
+DISTRO_FEATURES_append += ” bluez5 bluetooth wifi”
+IMAGE_INSTALL_append += ” linux-firmware-brcm43430 bluez5 i2c-tools python-smbus bridge-utils hostapd dhcp-server iptables wpa-supplicant”
+##################################################
+
+2) Add following lines to bblayers.conf
+##################################################
+${BSPDIR}/sources/meta-openembedded/meta-python \
+${BSPDIR}/sources/meta-openembedded/meta-networking \
+##################################################
+
+3) cd ~/rpi/
+4) source sources/poky/oe-init-build-env rpi-build
+5) bitbake [image-name]
+
+Hope it helps…!!
