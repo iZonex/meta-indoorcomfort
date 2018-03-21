@@ -217,3 +217,8 @@ PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
 # track the version of this file when it was generated. This can safely be ignored if
 # this doesn't mean anything to you.
 CONF_VERSION = "1"
+IMAGE_INSTALL_append = "ntp aufs-util docker avahi"
+DISTRO_FEATURES_append = " systemd virtualization"
+DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+VIRTUAL-RUNTIME_init_manager = "systemd"
+VIRTUAL-RUNTIME_initscripts = systemd-compat-units"

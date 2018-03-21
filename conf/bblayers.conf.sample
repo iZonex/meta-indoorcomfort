@@ -2,16 +2,19 @@
 # changes incompatibly
 POKY_BBLAYERS_CONF_VERSION = "2"
 
+BSPDIR = "/home/dmytro/Projects/poky"
 BBPATH = "${TOPDIR}"
 BBFILES ?= ""
 
 BBLAYERS ?= " \
-  /workdir/poky/meta \
-  /workdir/poky/meta-poky \
-  /workdir/poky/meta-yocto-bsp \
-  /workdir/poky/meta-openembedded/meta-oe \
-  /workdir/poky/meta-openembedded/meta-python \
-  /workdir/poky/meta-openembedded/meta-networking \
-  /workdir/poky/meta-raspberrypi \
-  /workdir/poky/meta-indoorcomfort \
+  ${BSPDIR}/poky/meta \
+  ${BSPDIR}/poky/meta-poky \
+  ${BSPDIR}/poky/meta-yocto-bsp \
+  ${BSPDIR}/meta-openembedded/meta-oe \
+  ${BSPDIR}/meta-openembedded/meta-python \
+  ${BSPDIR}/meta-openembedded/meta-networking \
+  ${BSPDIR}/meta-openembedded/meta-filesystems \
+  ${BSPDIR}/meta-virtualization \
+  ${BSPDIR}/poky/meta-raspberrypi \
+  ${BSPDIR}/poky/meta-indoorcomfort \
   "
