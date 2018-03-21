@@ -1,8 +1,5 @@
-[Math]
-Name=eth0
+[Match]
+Name=eth*
 
 [Network]
-DHCP=both
-
-[DHCP]
-RouteMetric=10
+DHCP=v4
