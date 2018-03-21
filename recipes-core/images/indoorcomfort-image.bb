@@ -2,6 +2,8 @@ DESCRIPTION = "Indoor Comfort production image"
 
 inherit core-image
 
+ENABLE_I2C = "1"
+
 IMAGE_FEATURES_append = " \
     splash \
 "
