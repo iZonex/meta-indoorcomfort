@@ -2,10 +2,6 @@ DESCRIPTION = "Indoor Comfort production image"
 
 inherit core-image
 
-IMAGE_FEATURES_append = " \
-    splash \
-"
-
 IMAGE_INSTALL_append = " \
     kernel-modules \
     ntp \
