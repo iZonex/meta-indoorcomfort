@@ -13,6 +13,7 @@ IMAGE_INSTALL_append = " \
     i2c-tools \
     python-smbus \
     bridge-utils \
+    dnsmasq \
     hostapd \
     dhcp-server \
     iptables \

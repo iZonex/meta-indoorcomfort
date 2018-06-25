@@ -1,0 +1,45 @@
+# Build pipeline
+
+https://elinux.org/images/8/81/Creating_Continuous_Delivery_for_Yocto_Based_IoT_Distribution.pdf
+
+# Access Point
+
+http://www.intellamech.com/RaspberryPi-projects/rpi3_simple_wifi_ap.html
+
+# Update Protection from Falure
+
+https://mender.io/product/how-it-works
+
+# Meta-RaspberryPi
+
+http://meta-raspberrypi.readthedocs.io/en/latest/extra-build-config.html#boot-to-u-boot
+
+
+# OTA
+
+https://wiki.yoctoproject.org/wiki/System_Update
+https://bootlin.com/blog/mender-how-to-integrate-an-ota-updater/
+https://docs.mender.io/1.1/getting-started/create-a-test-environment
+
+# Custom Board Support
+
+http://www.imx6rex.com/open-rex/software/yocto-meta-layer-how-to-add-support-for-a-custom-board-or-openrex/
+
+# Combolayer
+
+https://wiki.yoctoproject.org/wiki/Combo-layer
+
+# Automation Testing
+
+https://elinux.org/images/8/81/Creating_Continuous_Delivery_for_Yocto_Based_IoT_Distribution.pdf
+
+# Mozilla
+
+https://iot.mozilla.org/
+https://github.com/mozilla-iot
+
+# Continer build
+
+https://github.com/crops/poky-container
+docker run --rm -it -v ~/Projects/indoorcomfort/client/project:/workdir crops/poky --workdir=/workdir
+
